@@ -18,6 +18,7 @@
 		023FC7EB2BE5B427007A6DD7 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FC7EA2BE5B427007A6DD7 /* ProjectCardView.swift */; };
 		023FC7ED2BE5B6FF007A6DD7 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FC7EC2BE5B6FF007A6DD7 /* AddProjectView.swift */; };
 		023FC7F02BE5D263007A6DD7 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FC7EF2BE5D263007A6DD7 /* ProjectDetailView.swift */; };
+		023FC7F22BE5EC22007A6DD7 /* ProjectUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FC7F12BE5EC22007A6DD7 /* ProjectUpdateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		023FC7EA2BE5B427007A6DD7 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 		023FC7EC2BE5B6FF007A6DD7 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 		023FC7EF2BE5D263007A6DD7 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
+		023FC7F12BE5EC22007A6DD7 /* ProjectUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				023FC7EF2BE5D263007A6DD7 /* ProjectDetailView.swift */,
+				023FC7F12BE5EC22007A6DD7 /* ProjectUpdateView.swift */,
 			);
 			path = ProjectDetial;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				023FC7D32BE454FC007A6DD7 /* ProjectListView.swift in Sources */,
 				023FC7D12BE454FC007A6DD7 /* Project_TrackerApp.swift in Sources */,
 				023FC7E92BE5B1B7007A6DD7 /* StatBubbleView.swift in Sources */,
+				023FC7F22BE5EC22007A6DD7 /* ProjectUpdateView.swift in Sources */,
 				023FC7EB2BE5B427007A6DD7 /* ProjectCardView.swift in Sources */,
 				023FC7DF2BE45AD2007A6DD7 /* Project.swift in Sources */,
 			);
