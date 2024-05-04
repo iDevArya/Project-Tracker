@@ -32,13 +32,16 @@ struct ProjectCardView: View {
                     StatBubbleView(title: "Win", stat: "2", gradientStartColor: Color("Maroon"), gradientEndColor: Color("Olive"))
                     Spacer()
                 }
-                Text("My current foucs is...")
-                    .font(.featuredText)
-                    .foregroundStyle(.gray)
-                Text("Design new website")
-                    .font(.featuredText)
-                    .foregroundStyle(.gray)
-                    .bold()
+                if project.focus.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+                    Text("My current foucs is...")
+                        .font(.featuredText)
+                        .foregroundStyle(.gray)
+                    Text(project.focus)
+                        .font(.featuredText)
+                        .foregroundStyle(.gray)
+                        .bold()
+                }
+                
             }
             .padding()
         }
