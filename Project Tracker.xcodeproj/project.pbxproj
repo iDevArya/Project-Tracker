@@ -16,6 +16,7 @@
 		023FC7E62BE4614F007A6DD7 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FC7E52BE4614F007A6DD7 /* FontHelper.swift */; };
 		023FC7E92BE5B1B7007A6DD7 /* StatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FC7E82BE5B1B7007A6DD7 /* StatBubbleView.swift */; };
 		023FC7EB2BE5B427007A6DD7 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FC7EA2BE5B427007A6DD7 /* ProjectCardView.swift */; };
+		023FC7ED2BE5B6FF007A6DD7 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FC7EC2BE5B6FF007A6DD7 /* AddProjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		023FC7E52BE4614F007A6DD7 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		023FC7E82BE5B1B7007A6DD7 /* StatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBubbleView.swift; sourceTree = "<group>"; };
 		023FC7EA2BE5B427007A6DD7 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
+		023FC7EC2BE5B6FF007A6DD7 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				023FC7D02BE454FC007A6DD7 /* Project_TrackerApp.swift */,
-				023FC7D22BE454FC007A6DD7 /* ProjectListView.swift */,
 				023FC7E72BE5B19A007A6DD7 /* ProjectList */,
 				023FC7E32BE460F7007A6DD7 /* Models */,
 				023FC7E42BE4611F007A6DD7 /* Helpers */,
@@ -100,8 +101,10 @@
 		023FC7E72BE5B19A007A6DD7 /* ProjectList */ = {
 			isa = PBXGroup;
 			children = (
+				023FC7D22BE454FC007A6DD7 /* ProjectListView.swift */,
 				023FC7EA2BE5B427007A6DD7 /* ProjectCardView.swift */,
 				023FC7E82BE5B1B7007A6DD7 /* StatBubbleView.swift */,
+				023FC7EC2BE5B6FF007A6DD7 /* AddProjectView.swift */,
 			);
 			path = ProjectList;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			files = (
 				023FC7E12BE45B68007A6DD7 /* ProjectUpdate.swift in Sources */,
 				023FC7E62BE4614F007A6DD7 /* FontHelper.swift in Sources */,
+				023FC7ED2BE5B6FF007A6DD7 /* AddProjectView.swift in Sources */,
 				023FC7D32BE454FC007A6DD7 /* ProjectListView.swift in Sources */,
 				023FC7D12BE454FC007A6DD7 /* Project_TrackerApp.swift in Sources */,
 				023FC7E92BE5B1B7007A6DD7 /* StatBubbleView.swift in Sources */,
