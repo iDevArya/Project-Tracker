@@ -16,6 +16,7 @@ struct ProjectListView: View {
     
     @Environment(\.modelContext) private var context
     
+    @State private var selectedProject: Project?
     var body: some View {
         NavigationStack {
             ZStack {
@@ -30,12 +31,15 @@ struct ProjectListView: View {
                     ScrollView(showsIndicators: false) {
                         VStack(alignment: .leading, spacing: 26) {
                             ForEach(project) { p in
-                                NavigationLink {
-                                    ProjectDetailView(project: p)
-                                } label: {
-                                    ProjectCardView(project: p)
-                                }
-                                .buttonStyle(.plain)
+                                
+                                ProjectCardView(project: p)
+                                    .onTapGesture {
+                                        selectedProject = p
+                                    }
+                                    .onLongPressGesture {
+                                        newProject = p
+                                    }
+                                
                             }
                             
                         }
@@ -62,9 +66,13 @@ struct ProjectListView: View {
                 }
                 .padding()
             }
+            .navigationDestination(item: $selectedProject) { project in
+                ProjectDetailView(project: project)
+            }
         }
         .sheet(item: $newProject) { project in
-            AddProjectView(project: project)
+            let isEdit =  project.name.trimmingCharacters(in: .whitespacesAndNewlines) != ""
+            EditProjectView(project: project, isEditMode: isEdit)
                 .presentationDetents([.fraction(0.2)])
         }
     }
