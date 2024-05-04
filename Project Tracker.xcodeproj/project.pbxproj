@@ -19,6 +19,8 @@
 		023FC7ED2BE5B6FF007A6DD7 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FC7EC2BE5B6FF007A6DD7 /* AddProjectView.swift */; };
 		023FC7F02BE5D263007A6DD7 /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FC7EF2BE5D263007A6DD7 /* ProjectDetailView.swift */; };
 		023FC7F22BE5EC22007A6DD7 /* ProjectUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FC7F12BE5EC22007A6DD7 /* ProjectUpdateView.swift */; };
+		028F1C932BE6D7A10076270C /* AddUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F1C922BE6D7A10076270C /* AddUpdateView.swift */; };
+		028F1C952BE6DF660076270C /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F1C942BE6DF660076270C /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		023FC7EC2BE5B6FF007A6DD7 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 		023FC7EF2BE5D263007A6DD7 /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
 		023FC7F12BE5EC22007A6DD7 /* ProjectUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdateView.swift; sourceTree = "<group>"; };
+		028F1C922BE6D7A10076270C /* AddUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateView.swift; sourceTree = "<group>"; };
+		028F1C942BE6DF660076270C /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				023FC7E52BE4614F007A6DD7 /* FontHelper.swift */,
+				028F1C942BE6DF660076270C /* DateHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			children = (
 				023FC7EF2BE5D263007A6DD7 /* ProjectDetailView.swift */,
 				023FC7F12BE5EC22007A6DD7 /* ProjectUpdateView.swift */,
+				028F1C922BE6D7A10076270C /* AddUpdateView.swift */,
 			);
 			path = ProjectDetial;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028F1C952BE6DF660076270C /* DateHelper.swift in Sources */,
 				023FC7E12BE45B68007A6DD7 /* ProjectUpdate.swift in Sources */,
 				023FC7E62BE4614F007A6DD7 /* FontHelper.swift in Sources */,
 				023FC7F02BE5D263007A6DD7 /* ProjectDetailView.swift in Sources */,
@@ -203,6 +210,7 @@
 				023FC7F22BE5EC22007A6DD7 /* ProjectUpdateView.swift in Sources */,
 				023FC7EB2BE5B427007A6DD7 /* ProjectCardView.swift in Sources */,
 				023FC7DF2BE45AD2007A6DD7 /* Project.swift in Sources */,
+				028F1C932BE6D7A10076270C /* AddUpdateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

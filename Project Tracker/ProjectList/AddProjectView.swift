@@ -40,8 +40,7 @@ struct AddProjectView: View {
             }
             .padding(.horizontal)
             .padding(.top)
-        }
-        
+        }  
     }
 }
 
