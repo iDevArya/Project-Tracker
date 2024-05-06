@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ProjectDetailView: View {
     
     @Environment(\.dismiss) private var dismiss
-    
+    @Environment(\.modelContext) private var context
     var project: Project
     
     @State private var projectUpdate: ProjectUpdate?
@@ -32,13 +33,13 @@ struct ProjectDetailView: View {
                     
                     HStack(alignment: .center, spacing: 13) {
                         Spacer()
-                        StatBubbleView(title: "Hours", stat: "200", gradientStartColor: Color("Navy"), gradientEndColor: Color("Sky Blue"))
+                        StatBubbleView(title: "Hours", stat: String(project.hours), gradientStartColor: Color("Navy"), gradientEndColor: Color("Sky Blue"))
                         
-                        StatBubbleView(title: "Sessions", stat: "34", gradientStartColor: Color("Turtle Green"), gradientEndColor: Color("Lime"))
+                        StatBubbleView(title: "Sessions", stat: String(project.sessions), gradientStartColor: Color("Turtle Green"), gradientEndColor: Color("Lime"))
                         
-                        StatBubbleView(title: "Updates", stat: "20", gradientStartColor: Color("Maroon"), gradientEndColor: Color("Fuschia"))
+                        StatBubbleView(title: "Updates", stat: String(project.updates.count), gradientStartColor: Color("Maroon"), gradientEndColor: Color("Fuschia"))
                         
-                        StatBubbleView(title: "Win", stat: "2", gradientStartColor: Color("Maroon"), gradientEndColor: Color("Olive"))
+                        StatBubbleView(title: "Win", stat: String(project.wins), gradientStartColor: Color("Maroon"), gradientEndColor: Color("Olive"))
                         Spacer()
                     }
                     
@@ -140,7 +141,8 @@ struct ProjectDetailView: View {
         update.headline = "Milestone Achieved"
         update.summary = project.focus
         project.updates.insert(update, at: 0)
-        
+        try? context.save()
+        StatHelper.updateAdded(project: project, update: update)
         project.focus = ""
     }
 }

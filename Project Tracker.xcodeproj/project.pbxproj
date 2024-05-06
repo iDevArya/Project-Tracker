@@ -22,6 +22,7 @@
 		028F1C932BE6D7A10076270C /* EditUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F1C922BE6D7A10076270C /* EditUpdateView.swift */; };
 		028F1C952BE6DF660076270C /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F1C942BE6DF660076270C /* DateHelper.swift */; };
 		028F1C972BE6EA070076270C /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F1C962BE6EA070076270C /* EditFocusView.swift */; };
+		028F1C992BE70E2D0076270C /* StatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F1C982BE70E2D0076270C /* StatHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		028F1C922BE6D7A10076270C /* EditUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUpdateView.swift; sourceTree = "<group>"; };
 		028F1C942BE6DF660076270C /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		028F1C962BE6EA070076270C /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
+		028F1C982BE70E2D0076270C /* StatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				023FC7E52BE4614F007A6DD7 /* FontHelper.swift */,
 				028F1C942BE6DF660076270C /* DateHelper.swift */,
+				028F1C982BE70E2D0076270C /* StatHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				023FC7E92BE5B1B7007A6DD7 /* StatBubbleView.swift in Sources */,
 				023FC7F22BE5EC22007A6DD7 /* ProjectUpdateView.swift in Sources */,
 				023FC7EB2BE5B427007A6DD7 /* ProjectCardView.swift in Sources */,
+				028F1C992BE70E2D0076270C /* StatHelper.swift in Sources */,
 				023FC7DF2BE45AD2007A6DD7 /* Project.swift in Sources */,
 				028F1C932BE6D7A10076270C /* EditUpdateView.swift in Sources */,
 			);
