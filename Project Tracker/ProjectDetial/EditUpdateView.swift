@@ -43,7 +43,7 @@ struct EditUpdateView: View {
                         .frame(width: 70)
                     Button(isEditMode ? "Save" : "Add") {
                         // Save Project to SwiftData
-                        let hoursDiff = update.hours - Double(hours)!
+                        let hoursDiff = Double(hours)! - update.hours 
                         update.headline = headLine
                         update.summary = summary
                         update.hours = Double(hours)!
