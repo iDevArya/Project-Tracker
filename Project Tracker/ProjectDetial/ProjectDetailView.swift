@@ -17,6 +17,7 @@ struct ProjectDetailView: View {
     @State private var projectUpdate: ProjectUpdate?
     
     @State private var showEditFocus = false
+    @State private var animationOffSet = 200
     var body: some View {
         
         ZStack {
@@ -74,12 +75,14 @@ struct ProjectDetailView: View {
                 if project.updates.count > 0 {
                     ScrollView(showsIndicators: false) {
                         VStack(spacing: 27) {
-                            ForEach(project.updates.sorted(by: { u1, u2 in
+                            let sortedArray = project.updates.sorted(by: { u1, u2 in
                                 u1.date > u2.date
-                            })) { update in
+                            })
+                            ForEach(Array(sortedArray.enumerated()), id: \.element) { index, update in
                                     ProjectUpdateView(update: update)
+                                    .animation(.easeOut.delay(TimeInterval(0.05) * Double(index)), value: animationOffSet)
+                                    .offset(y: CGFloat(animationOffSet))
                                     .onTapGesture {
-                                    
                                     }
                                     .onLongPressGesture {
                                         projectUpdate = update
@@ -150,6 +153,11 @@ struct ProjectDetailView: View {
         .sheet(isPresented: $showEditFocus) {
             EditFocusView(project: project)
                 .presentationDetents([.fraction(0.2)])
+        }
+        .onAppear {
+            withAnimation {
+                animationOffSet = 0
+            }
         }
     }
     

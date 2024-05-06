@@ -33,6 +33,7 @@ struct ProjectListView: View {
                                 ForEach(project) { p in
                                     
                                     ProjectCardView(project: p)
+                                        .transition(.scale)
                                         .onTapGesture {
                                             selectedProject = p
                                         }

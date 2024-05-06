@@ -61,12 +61,18 @@ struct EditUpdateView: View {
                         
                         
                         if !isEditMode {
-                            project.updates.insert(update, at: 0)
+                            withAnimation {
+                                project.updates.insert(update, at: 0)
+                                
+                                try? context.save()
+                                StatHelper.updateAdded(project: project, update: update)
+                            }
                             
-                            try? context.save()
-                            StatHelper.updateAdded(project: project, update: update)
                         } else {
-                            StatHelper.updateEdited(project: project, hoursDiff: hoursDiff)
+                            withAnimation {
+                                StatHelper.updateEdited(project: project, hoursDiff: hoursDiff)
+                            }
+                           
                         }
                         
                         dismiss()
@@ -90,11 +96,13 @@ struct EditUpdateView: View {
         }
         .confirmationDialog("Do you want to Delete the Update?", isPresented: $showConfirmation) {
             Button("Yes, Delete") {
-                project.updates.removeAll { u in
-                    u.id == update.id
+                withAnimation {
+                    project.updates.removeAll { u in
+                        u.id == update.id
+                    }
+                    try? context.save()
+                    StatHelper.updateDeleted(project: project, update: update)
                 }
-                try? context.save()
-                StatHelper.updateDeleted(project: project, update: update)
                 dismiss()
             }
         }
