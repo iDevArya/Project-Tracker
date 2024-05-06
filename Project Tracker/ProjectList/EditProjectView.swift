@@ -29,6 +29,9 @@ struct EditProjectView: View {
                 HStack {
                     TextField("Project Name:", text: $projectName)
                         .textFieldStyle(.roundedBorder)
+                        .onChange(of: projectName) { oldValue, newValue in
+                            projectName = TextHelper.limitCharacters(input: projectName, limit: 30)
+                        }
                     
                     Button(isEditMode ? "Save" : "Add") {
                         // Save Project to SwiftData

@@ -27,23 +27,38 @@ struct ProjectListView: View {
                     Text("Project")
                         .font(.screenHeading)
                         .foregroundStyle(.white)
-                    
-                    ScrollView(showsIndicators: false) {
-                        VStack(alignment: .leading, spacing: 26) {
-                            ForEach(project) { p in
-                                
-                                ProjectCardView(project: p)
-                                    .onTapGesture {
-                                        selectedProject = p
-                                    }
-                                    .onLongPressGesture {
-                                        newProject = p
-                                    }
+                    if project.count > 0 {
+                        ScrollView(showsIndicators: false) {
+                            VStack(alignment: .leading, spacing: 26) {
+                                ForEach(project) { p in
+                                    
+                                    ProjectCardView(project: p)
+                                        .onTapGesture {
+                                            selectedProject = p
+                                        }
+                                        .onLongPressGesture {
+                                            newProject = p
+                                        }
+                                    
+                                }
                                 
                             }
-                            
                         }
+                    } else {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Button("Tap to Add a New Project") {
+                                newProject = Project()
+                            }
+                            .buttonBorderShape(.roundedRectangle)
+                            .foregroundStyle(.white)
+                            .bold()
+                            Spacer()
+                        }
+                        Spacer()
                     }
+                    
                 }
                 .padding()
                 

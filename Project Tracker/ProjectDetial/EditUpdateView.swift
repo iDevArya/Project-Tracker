@@ -32,15 +32,26 @@ struct EditUpdateView: View {
                 
                 TextField("Headline:", text: $headLine)
                     .textFieldStyle(.roundedBorder)
+                    .onChange(of: headLine) { oldValue, newValue in
+                        headLine = TextHelper.limitCharacters(input: headLine, limit: 20)
+                    }
                 
                 TextField("Summary:", text: $summary, axis: .vertical)
                     .textFieldStyle(.roundedBorder)
+                    .onChange(of: summary) { oldValue, newValue in
+                        summary = TextHelper.limitCharacters(input: summary, limit: 50)
+                    }
                 
                 HStack {
                     TextField("Hours:", text: $hours)
                         .textFieldStyle(.roundedBorder)
                         .keyboardType(.numberPad)
                         .frame(width: 70)
+                        .onChange(of: hours) { oldValue, newValue in
+                            let num  = Int(TextHelper.limitCharacters(input: hours, limit: 2)) ?? 0
+                            hours = num > 24 ? "24" : String(num)
+                            
+                        }
                     Button(isEditMode ? "Save" : "Add") {
                         // Save Project to SwiftData
                         let hoursDiff = Double(hours)! - update.hours 
@@ -62,6 +73,7 @@ struct EditUpdateView: View {
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(.blue)
+                    .disabled(shouldDisabled())
                     
                     if isEditMode {
                         Button("Delete") {
@@ -91,6 +103,9 @@ struct EditUpdateView: View {
             summary = update.summary
             hours = String(Int(update.hours))
         }
+    }
+    private func shouldDisabled() -> Bool {
+        return headLine.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || summary.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || hours.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
 }
 

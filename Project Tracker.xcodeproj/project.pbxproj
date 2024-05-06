@@ -23,6 +23,7 @@
 		028F1C952BE6DF660076270C /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F1C942BE6DF660076270C /* DateHelper.swift */; };
 		028F1C972BE6EA070076270C /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F1C962BE6EA070076270C /* EditFocusView.swift */; };
 		028F1C992BE70E2D0076270C /* StatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F1C982BE70E2D0076270C /* StatHelper.swift */; };
+		028F1C9B2BE976190076270C /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028F1C9A2BE976190076270C /* TextHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		028F1C942BE6DF660076270C /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		028F1C962BE6EA070076270C /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
 		028F1C982BE70E2D0076270C /* StatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatHelper.swift; sourceTree = "<group>"; };
+		028F1C9A2BE976190076270C /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				023FC7E52BE4614F007A6DD7 /* FontHelper.swift */,
 				028F1C942BE6DF660076270C /* DateHelper.swift */,
 				028F1C982BE70E2D0076270C /* StatHelper.swift */,
+				028F1C9A2BE976190076270C /* TextHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				023FC7F02BE5D263007A6DD7 /* ProjectDetailView.swift in Sources */,
 				023FC7ED2BE5B6FF007A6DD7 /* EditProjectView.swift in Sources */,
 				023FC7D32BE454FC007A6DD7 /* ProjectListView.swift in Sources */,
+				028F1C9B2BE976190076270C /* TextHelper.swift in Sources */,
 				023FC7D12BE454FC007A6DD7 /* Project_TrackerApp.swift in Sources */,
 				023FC7E92BE5B1B7007A6DD7 /* StatBubbleView.swift in Sources */,
 				023FC7F22BE5EC22007A6DD7 /* ProjectUpdateView.swift in Sources */,
