@@ -33,7 +33,7 @@ struct EditUpdateView: View {
                 TextField("Headline:", text: $headLine)
                     .textFieldStyle(.roundedBorder)
                     .onChange(of: headLine) { oldValue, newValue in
-                        headLine = TextHelper.limitCharacters(input: headLine, limit: 20)
+                        headLine = TextHelper.limitCharacters(input: headLine, limit: 30)
                     }
                 
                 TextField("Summary:", text: $summary, axis: .vertical)
